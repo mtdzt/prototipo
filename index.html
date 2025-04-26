@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha Loja</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">🛍️ HortiShop®</div>
+    <input type="text" id="search" placeholder="Buscar produtos..." oninput="filtrarProdutos()">
+    <div class="actions">
+      <button onclick="abrirLogin()">Login</button>
+      <button onclick="abrirCarrinho()">🛒 Carrinho (<span id="qtd-carrinho">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+      <p>Não tem conta? <a href="#" onclick="abrirCadastro()">Cadastre-se</a></p>
+      <button class="fechar" onclick="fecharLogin()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Cadastro Modal -->
+  <div id="cadastro-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Cadastro</h2>
+      <input type="text" id="novo-username" placeholder="Novo Usuário">
+      <input type="password" id="novo-password" placeholder="Nova Senha">
+      <button onclick="cadastrar()">Cadastrar</button>
+      <button class="fechar" onclick="fecharCadastro()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Carrinho Modal -->
+  <div id="carrinho-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Meu Carrinho</h2>
+      <div id="itens-carrinho"></div>
+      <button class="fechar" onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <aside class="filtros">
+      <h2>Filtros</h2>
+      <p>(Filtros em breve)</p>
+    </aside>
+
+    <main id="produtos">
+      <!-- Produtos serão gerados aqui -->
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 HortiShop. Todos os direitos reservados.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
