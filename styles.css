@@ -124,7 +124,7 @@ aside.filtros {
   color: white;
 }
 .produto button {
-  background-color: #28a745;
+  background-color: #2837a7;
   color: white;
   border: none;
   padding: 0.7rem 1.2rem;
@@ -135,12 +135,12 @@ aside.filtros {
 }
 
 .produto button:hover {
-  background-color: #218838;
+  background-color: #212f88;
   transform: scale(1.05);
 }
 
 .produto button:active {
-  background-color: #1e7e34;
+  background-color: #1e597e;
 }
 
 footer {
